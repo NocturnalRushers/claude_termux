@@ -105,7 +105,7 @@ function clewdSettings {
                     sed -i "/\"CookieArray\"/s/\[/\[$cookie_array\,/" ./$clewd_dir/config.js
                     echo "Cookies成功被添加到config.js文件了"
                 else
-                    echo "没有找到cookie，如果要退出输入请按Ctrl+D（点击termux界面下部的Ctrl，然后点击自己键盘的D"
+                    echo "没有找到cookie，如果要退出输入请按Ctrl+D（点击termux界面下部的Ctrl，然后点击自己键盘的D)"
                 fi
             done
             echo "cookies成功输入了"
@@ -141,7 +141,7 @@ function clewdSettings {
             ;;
         6)  
             # 修改 Cookiecounter
-            echo "切换Cookie的频率, 默认为3(每3次切换), 改为-1进入测试Cookie模式"
+            echo "切换Cookie的频率, 默认为3(每3次切换,数字越大，单个账号使用条数越多), 改为-1进入测试Cookie模式"
             read -p "是否要修改Cookiecounter?(y/n)" choice
             if [ "$choice" == "y" ] || [ "$choice" == "Y" ]; then
                 # 读取用户输入Cookiecounter
@@ -294,14 +294,15 @@ function sillyTavernSettings {
 }
 
 # 主菜单
-echo -e "                                              
-一键安卓搭建酒馆+clewd脚本
+echo -e "  
+————————主菜单————————
+一键安卓使用脚本
 版本：$version
 最新：\033[0;33m$latest_version\033[0m
 运行时需要稳定的魔法网络环境"
 while :
 do 
-    echo -e "\033[0;36mhoping请输入数字进行执行（输入数字即可）\033[0;38m(｡ì _ í｡)\033[0m\n\033[0m\033[0;33m--------------------------------------\n\033[0m\033[0;31m选项0 退出脚本\n\033[0m\033[0;33m选项1 启动Clewd\n\033[0m\033[0;37m选项2 启动酒馆\n\033[0m\033[0;33m选项3 Clewd设置\n\033[0m\033[0;37m选项4 酒馆配置\n\033[0m\033[0;31m选项5 更新脚本\n\033[0m\033[0;33m--------------------------------------\n\033[0m\033[0;35m不要选其他选项\n\033[0m\n"
+    echo -e "\033[0;36mhoping请输入数字进行执行（输入数字即可）\033[0;38m \033[0m\n\033[0m\033[0;33m--------------------------------------\n\033[0m\033[0;31m选项0 退出脚本\n\033[0m\033[0;33m选项1 启动Clewd\n\033[0m\033[0;37m选项2 启动酒馆\n\033[0m\033[0;33m选项3 Clewd设置\n\033[0m\033[0;37m选项4 酒馆配置\n\033[0m\033[0;31m选项5 更新脚本\n\033[0m\033[0;33m--------------------------------------\n\033[0m\033[0;35m不要选其他选项\n\033[0m\n"
     read -n 1 option
     echo 
     case $option in 
