@@ -53,6 +53,7 @@ tar xf node-v20.10.0-linux-arm64.tar.xz
 echo "export PATH=\$PATH:/root/node-v20.10.0-linux-arm64/bin" >>$current/etc/profile
 fi
 
+echo "正在安装SillyTavern和clewd"
 if [ ! -d "SillyTavern" ]; then
 git clone https://github.com/SillyTavern/SillyTavern
 fi
