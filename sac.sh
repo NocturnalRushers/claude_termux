@@ -308,13 +308,14 @@ do
     case $option in 
         0) 
             break ;; 
-	1) #同时启动酒馆和clewd
-             #启动SillyTavern和clewd
-            cd SillyTavern && bash start.sh &  cd clewd  && bash start.sh 
+	1)
+ 	   #同时启动酒馆和clewd
+            cd clewd  && bash start.sh &  cd SillyTavern && bash start.sh 
             echo "酒馆和clewd已关闭, 即将返回主菜单"
             cd ../
             ;; 
-        2) #启动Clewd
+        2) 
+	   #启动Clewd
             port=$(grep -oP '"Port":\s*\K\d+' clewd/config.js)
             echo "端口为$port, 出现 (x)Login in {邮箱} 代表启动成功, 后续出现AI无法应答等报错请检查本窗口。"
             cd clewd
