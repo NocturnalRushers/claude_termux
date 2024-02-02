@@ -310,8 +310,7 @@ do
             break ;; 
 	1) #同时启动酒馆和clewd
              #启动SillyTavern和clewd
-            cd ~/SillyTavern && bash start.sh &
-            cd ~/clewd  && bash start.sh 
+            cd SillyTavern && bash start.sh &  cd clewd  && bash start.sh 
             echo "酒馆和clewd已关闭, 即将返回主菜单"
             cd ../
             ;; 
