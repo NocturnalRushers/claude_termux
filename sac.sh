@@ -113,7 +113,7 @@ function clewdSettings {
                     sed -i "/\"CookieArray\"/s/\[/\[$cookie_array\,/" ./$clewd_dir/config.js
                     echo "Cookies成功被添加到config.js文件了"
                 else
-                    echo "没有找到cookie，如果要退出输入请按Ctrl+D（点击termux界面下部的Ctrl，然后点击自己键盘的D)
+                    echo "没有找到cookie，如果要退出输入请按Ctrl+D（点击termux界面下部的Ctrl，然后点击自己键盘的D)"
                 fi
             done
             echo "cookies成功输入了"
